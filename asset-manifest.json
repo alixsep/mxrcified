@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mxrcified/static/css/main.f9070a3a.css",
-    "main.js": "/mxrcified/static/js/main.5b5025e1.js",
+    "main.js": "/mxrcified/static/js/main.7738945e.js",
     "static/media/mercy.png": "/mxrcified/static/media/mercy.389635288c069ec53e93.png",
     "static/media/top-white.png": "/mxrcified/static/media/top-white.be15c9ce096a5ba9c13d.png",
     "index.html": "/mxrcified/index.html"
   },
   "entrypoints": [
     "static/css/main.f9070a3a.css",
-    "static/js/main.5b5025e1.js"
+    "static/js/main.7738945e.js"
   ]
 }
