@@ -1,0 +1,138 @@
+$cbg: #0f1113;
+
+.app {
+  text-align: center;
+  background-color: $cbg;
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  min-width: 400px;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  .box {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    left: 2rem;
+    bottom: 2rem;
+    pointer-events: none;
+    border: 2px solid #fff;
+  }
+  .bg {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-bottom: -150px;
+    .top,
+    .mercy {
+      position: absolute;
+      left: 0;
+    }
+    .top {
+      top: 105px;
+      z-index: 1;
+    }
+    .mercy {
+      top: 0;
+    }
+  }
+  .body {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 0.85rem;
+    width: 100%;
+    .body-top {
+      margin: 0 2rem;
+      padding: 28px 0 0;
+      .members {
+        display: flex;
+        justify-content: center;
+        // flex-wrap: wrap;
+        .member {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 132px;
+          margin: 1rem 0;
+          transform: translateY(32px);
+          opacity: 0;
+          &:hover {
+            img {
+              filter: grayscale(0%);
+              transform: translateY(-4px);
+            }
+            span {
+              transform: translateY(-4px);
+            }
+          }
+          @for $i from 1 to 10 {
+            &:nth-child(#{$i}) {
+              animation: show
+                2s
+                cubic-bezier(0.15, 0.86, 0.54, 1)
+                #{$i /
+                4}s
+                forwards;
+            }
+          }
+          img {
+            width: 100px;
+            height: 100px;
+            filter: grayscale(100%);
+            clip-path: polygon(
+              25% 0%,
+              100% 0,
+              100% 75%,
+              75% 100%,
+              0 100%,
+              0 25%
+            );
+          }
+          span {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    .body-bottom {
+      background-color: $cbg;
+      width: 400px;
+      z-index: 1;
+      margin: 0 auto;
+      a {
+        background-color: #850101;
+        padding: 0 0.5rem;
+        &:hover {
+          background-color: red;
+        }
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+
+        .space {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(32px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
